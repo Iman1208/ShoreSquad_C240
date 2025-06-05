@@ -15,6 +15,10 @@
       <li><a href="#weather-section">Weather</a></li>
       <li><a href="#crew-section">Crew</a></li>
     </ul>
+    <div class="auth-actions">
+      <button id="login-btn" class="auth-btn">Login</button>
+      <button id="logout-btn" class="auth-btn" style="display:none;">Logout</button>
+    </div>
   </nav>
   <section id="home" class="hero">
     <div class="hero-content">
@@ -95,5 +99,31 @@
     <p>&copy; 2025 ShoreSquad. Eco-action made fun!</p>
   </footer>
   <script src="js/app.js"></script>
+  <script>
+    // Simple placeholder login/logout toggle
+    const loginBtn = document.getElementById('login-btn');
+    const logoutBtn = document.getElementById('logout-btn');
+    let loggedIn = false;
+    function updateAuthUI() {
+      if (loggedIn) {
+        loginBtn.style.display = 'none';
+        logoutBtn.style.display = 'inline-block';
+      } else {
+        loginBtn.style.display = 'inline-block';
+        logoutBtn.style.display = 'none';
+      }
+    }
+    loginBtn.addEventListener('click', () => {
+      loggedIn = true;
+      updateAuthUI();
+      alert('Welcome back, ShoreSquadder!');
+    });
+    logoutBtn.addEventListener('click', () => {
+      loggedIn = false;
+      updateAuthUI();
+      alert('You have logged out. See you at the next cleanup!');
+    });
+    updateAuthUI();
+  </script>
 </body>
 </html>
