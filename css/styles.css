@@ -87,11 +87,153 @@ main {
   font-size: 0.95em;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary);
+  color: #fff;
+  padding: 0.7rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(30,144,255,0.08);
+}
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+}
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1em;
+  transition: color 0.2s;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+.nav-links li a.active,
+.nav-links li a:hover {
+  color: var(--secondary);
+  border-bottom: 2px solid var(--secondary);
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, var(--primary) 60%, var(--accent) 100%);
+  color: #fff;
+  padding: 3rem 2rem 2rem 2rem;
+  min-height: 350px;
+  border-radius: 0 0 32px 32px;
+  box-shadow: 0 4px 16px rgba(30,144,255,0.10);
+  margin-bottom: 2rem;
+}
+.hero-content {
+  flex: 1 1 320px;
+  z-index: 2;
+}
+.hero-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.3em;
+}
+.hero-content .brand {
+  color: var(--secondary);
+  font-weight: bold;
+}
+.hero-tag {
+  font-size: 1.2em;
+  margin-bottom: 1.2em;
+}
+.cta-btn {
+  display: inline-block;
+  background: var(--secondary);
+  color: var(--primary);
+  font-weight: bold;
+  padding: 0.8em 2em;
+  border-radius: 24px;
+  text-decoration: none;
+  font-size: 1.1em;
+  box-shadow: 0 2px 8px rgba(255,215,0,0.10);
+  transition: var(--background) 0.2s, color 0.2s;
+}
+.cta-btn:hover {
+  background: var(--highlight);
+  color: #fff;
+}
+.hero-graphic {
+  flex: 1 1 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+.hero-graphic img {
+  max-width: 320px;
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 0.5em;
+}
+.social-icon {
+  font-size: 1.5em;
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.social-icon:hover {
+  color: var(--highlight);
+}
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    padding: 2rem 1rem 1.5rem 1rem;
+    min-height: 250px;
+  }
+  .hero-content {
+    text-align: center;
+  }
+  .hero-graphic {
+    margin-top: 1.5rem;
+  }
+}
+
 @media (max-width: 600px) {
   main {
     padding: 1rem 0.5rem;
   }
   #map, #weather, #crew {
     padding: 1rem;
+  }
+  .navbar {
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+  }
+  .nav-links {
+    gap: 1rem;
+  }
+  .hero {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+  }
+  .hero-graphic img {
+    max-width: 95vw;
   }
 }
