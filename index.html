@@ -8,22 +8,22 @@
 </head>
 <body>
   <nav class="navbar">
-    <div class="logo">🌊 ShoreSquad</div>
+    <div class="logo">🌊 ShoreSquad <span style="font-size:1.2em;">🏖️</span></div>
     <ul class="nav-links">
       <li><a href="#home" class="active">Home</a></li>
-      <li><a href="#map-section">Cleanups</a></li>
-      <li><a href="#weather-section">Weather</a></li>
-      <li><a href="#crew-section">Crew</a></li>
+      <li><a href="#map-section">Cleanups <span aria-label="wave" title="wave">🌊</span></a></li>
+      <li><a href="#weather-section">Weather <span aria-label="sun" title="sun">☀️</span></a></li>
+      <li><a href="#crew-section">Crew <span aria-label="friends" title="friends">🧑‍🤝‍🧑</span></a></li>
     </ul>
     <div class="auth-actions">
-      <button id="login-btn" class="auth-btn">Login</button>
-      <button id="logout-btn" class="auth-btn" style="display:none;">Logout</button>
+      <button id="login-btn" class="auth-btn">Login lah!</button>
+      <button id="logout-btn" class="auth-btn" style="display:none;">Logout lah!</button>
     </div>
   </nav>
   <section id="home" class="hero">
     <div class="hero-content">
-      <h1>Welcome to <span class="brand">ShoreSquad</span></h1>
-      <p class="hero-tag">Rally your crew, track weather, and hit the next beach cleanup!</p>
+      <h1>Welcome to <span class="brand">ShoreSquad</span> <span style="font-size:1.2em;">🏝️</span></h1>
+      <p class="hero-tag">Rally your crew, track weather, and hit the next beach cleanup, lah!</p>
       <a href="#map-section" class="cta-btn">Find Your Next Cleanup</a>
     </div>
     <div class="hero-graphic">
@@ -36,7 +36,7 @@
   </header>
   <main>
     <section id="map-section">
-      <h2>Find a Cleanup</h2>
+      <h2>Find a Cleanup <span style="font-size:1.1em;">🧹🏖️</span></h2>
       <div id="map">
         <!-- Embedded Google Map for Pasir Ris, pin at Street View Asia -->
         <iframe
@@ -55,11 +55,11 @@
       </div>
     </section>
     <section id="weather-section">
-      <h2>Weather Tracker <span style="font-size:0.7em; color:var(--accent);">(All temperatures in &deg;C, wind in km/h)</span></h2>
+      <h2>Weather Tracker <span style="font-size:0.7em; color:var(--accent);">(All temperatures in &deg;C, wind in km/h)</span> <span style="font-size:1.1em;">⛅</span></h2>
       <div id="weather"></div>
     </section>
     <section id="crew-section">
-      <h2>Your Crew</h2>
+      <h2>Your Crew <span style="font-size:1.1em;">🧑‍🤝‍🧑✨</span></h2>
       <div id="crew" class="crew-container">
         <div class="crew-list">
           <div class="crew-member">
@@ -84,8 +84,8 @@
           </div>
         </div>
         <div class="crew-actions">
-          <button class="invite-btn">+ Invite Friend</button>
-          <button class="share-btn">Share Crew Link</button>
+          <button class="invite-btn">+ Invite Friend lah!</button>
+          <button class="share-btn">Share Crew Link 🌊</button>
         </div>
       </div>
     </section>
@@ -96,7 +96,7 @@
       <a href="#" title="TikTok" class="social-icon">🎵</a>
       <a href="#" title="Discord" class="social-icon">💬</a>
     </div>
-    <p>&copy; 2025 ShoreSquad. Eco-action made fun!</p>
+    <p>&copy; 2025 ShoreSquad. Eco-action made fun, lah! 🏖️</p>
   </footer>
   <script src="js/app.js"></script>
   <script>
@@ -116,12 +116,12 @@
     loginBtn.addEventListener('click', () => {
       loggedIn = true;
       updateAuthUI();
-      alert('Welcome back, ShoreSquadder!');
+      alert('Welcome back, ShoreSquadder! Time to jio your crew, lah!');
     });
     logoutBtn.addEventListener('click', () => {
       loggedIn = false;
       updateAuthUI();
-      alert('You have logged out. See you at the next cleanup!');
+      alert('You have logged out. See you at the next cleanup, lah!');
     });
     updateAuthUI();
   </script>
